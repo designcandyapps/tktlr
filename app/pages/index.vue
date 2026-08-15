@@ -65,7 +65,7 @@ export default{
   mounted(){
     setTimeout(()=>{
       this.send2();
-      this.send3();
+      //this.send3();
     },7800);
   },
   methods:{
