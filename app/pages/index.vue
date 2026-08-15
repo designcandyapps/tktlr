@@ -64,8 +64,8 @@ export default{
   data(){return{prompt:"",prp:"",response:null}},
   mounted(){
     setTimeout(()=>{
-      alert(0);
-      this.send3()
+      this.send2();
+      this.send3();
     },7800);
   },
   methods:{
@@ -77,13 +77,16 @@ export default{
       //document.querySelector("#tr").innerText="sdesign";
     },
     async send2(){
-      const response=await fetch("/api/chat",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({message:document.querySelector("#pr2").value})});
-      const data=await response.json(); this.response=data.reply; //alert("RES00: "+JSON.stringify(data)); alert("RES01: "+this.response);
-      //alert("S: "+document.querySelector(".slick-slide"));
-      document.querySelector(".slick-slide>div>div>div>div").innerText=this.response;
+      const response=await fetch("/api/chat",{method:"POST",
+          headers:{
+            "Content-Type":"application/json"},
+            body:JSON.stringify({message:document.querySelector("#pr2").value})
+          });
+          const data=await response.json(); this.response=data.reply; alert("RES00: "+JSON.stringify(data)); alert("RES01: "+this.response);
+          document.querySelector("#t").value=this.response;
     },
     async send3(){
-      const response=await fetch("https://api.tickettailor.com/v1/events",{
+      const response=await fetch("https://api.tickettailor.com/v1/events/:2036131",{
         headers:{
           Accept:"application/json",
           Authorization:"Basic "+Buffer.from("sk_14995_133548_95cbe0f619ded70f2d57a144acefffc5:").toString("base64")},
