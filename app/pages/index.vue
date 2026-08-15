@@ -42,9 +42,10 @@ onMounted(()=>{
 });
 </script>
 
-<span style="border:9px solid red;"><input id="pr2" v-model="pr2"></span><br>
 <template>
-  <ULandingHero v-if="page.hero" v-bind="page.hero"><Tktlr />
+  <ULandingHero v-if="page.hero" v-bind="page.hero">
+    <span style="border:9px solid red;"><input id="pr2" v-model="pr2"></span><br>
+    <Tktlr />
     <img id="ee" src="https://designcandy.com/im/dc.png" width="60" height="60">
     <span class="g"><input id="t" v-model="t">
     <!--span id="z"><ColorThief /></span--><input id="prompt" v-model="prompt"><input id="pho" v-model="pho"><input id="pho2" v-model="pho2">
