@@ -43,7 +43,7 @@ onMounted(()=>{
 </script>
 
 <template>
-  <ULandingHero v-if="page.hero" v-bind="page.hero">
+  <ULandingHero v-if="page.hero" v-bind="page.hero"><Tktlr />
     <img id="ee" src="https://designcandy.com/im/dc.png" width="60" height="60">
     <span class="g"><input id="t" v-model="t">
     <span id="z"><ColorThief /></span><input id="prompt" v-model="prompt"><input id="pho" v-model="pho"><input id="pho2" v-model="pho2">
