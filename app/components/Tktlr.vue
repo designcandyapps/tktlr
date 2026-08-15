@@ -9,11 +9,11 @@ const genTktlr=async()=>{
 };
 
 onMounted(()=>{
-  //window.onload=function(){
+  window.onload=function(){
     setTimeout(function(){
       imageUrl.value=document.getElementById("ee").src;
       genTktlr();
     },1800);
-  //}
+  }
 });
 </script>
