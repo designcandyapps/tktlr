@@ -66,7 +66,7 @@ export default{
   data(){return{prompt:"",prp:"",response:null}},
   mounted(){
     //setTimeout(()=>{
-      this.send2();
+      this.send4();
       //this.send3();
     //},7800);
   },
@@ -100,7 +100,7 @@ export default{
       const response=await fetch("/api/tt",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({message:document.querySelector("#pr2").value})});
       const data=await response.json();
       alert("Test2");
-      this.response=data.reply; //alert("RES00: "+JSON.stringify(data)); alert("RES01: "+this.response);
+      this.response=data.reply; alert("RES00: "+JSON.stringify(data)); alert("RES01: "+this.response);
     },
   },
 }
