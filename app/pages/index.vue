@@ -65,10 +65,10 @@ onMounted(()=>{
 export default{
   data(){return{prompt:"",prp:"",response:null}},
   mounted(){
-    setTimeout(()=>{
+    //setTimeout(()=>{
       this.send2();
       //this.send3();
-    },7800);
+    //},7800);
   },
   methods:{
     async send(){
