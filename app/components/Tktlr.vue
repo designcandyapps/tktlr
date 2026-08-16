@@ -3,7 +3,7 @@ import {ref,onMounted} from "vue"; const pr2=document.querySelector("#pr2"); con
 
 const genTktlr=async()=>{
   alert(2);
-  proxyUrl.value=`/api/proxy?url=${encodeURIComponent(pr.value)}`;
+  proxyUrl.value=`/api/proxy?url=${encodeURIComponent(pr2.value)}`;
   //img.src=proxyUrl.value;
   alert("PRX: "+proxyUrl.value);
 };
