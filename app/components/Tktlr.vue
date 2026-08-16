@@ -5,7 +5,7 @@ const genTktlr=async()=>{
   alert(2);
   proxyUrl.value=`/api/proxy?url=${encodeURIComponent(document.querySelector("#pr2").value)}`;
   //img.src=proxyUrl.value;
-  alert(proxyUrl.value);
+  alert("PRX: "+proxyUrl.value);
 };
 
 onMounted(()=>{
