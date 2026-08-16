@@ -15,7 +15,7 @@ async function fetchGetty(query){
   }catch(error){console.error("Error2:",error)}
 }
 onMounted(()=>{
-  //setTimeout(function(){
+  setTimeout(function(){
     //const pr="cars";
     //document.getElementById("prompt").value=document.getElementById("tr").innerText;
     //const pr:string=new URLSearchParams(location.search).get("pr")??document.getElementById("prompt").value;
@@ -38,7 +38,7 @@ onMounted(()=>{
       photos.forEach(photo=>{pho.value=photo.urls.small}); //alert("PH: "+pho.value);
     });
     //fetchGetty(prp).then(image=>{pho2.value=image.display_sizes[0].uri});
-  //},7800);
+  },7800);
 });
 </script>
 
