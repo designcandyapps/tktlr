@@ -79,13 +79,11 @@ export default{
       //document.querySelector("#tr").innerText="sdesign";
     },
     async send2(){
-      const response=await fetch("/api/chat",{method:"POST",
-          headers:{
-            "Content-Type":"application/json"},
-            body:JSON.stringify({message:document.querySelector("#pr2").value})
-          });
-          const data=await response.json(); this.response=data.reply; alert("RES00: "+JSON.stringify(data)); alert("RES01: "+this.response);
-          document.querySelector("#t").value=this.response;
+      const response=await fetch("/api/chat",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({message:document.querySelector("#prompt").value})});
+      const data=await response.json(); this.response=data.reply; alert("RES00: "+JSON.stringify(data)); alert("RES01: "+this.response); //console.log(data.message.content);
+      //alert("T1: "+document.querySelector("#tr").innerText);
+      document.querySelector("#h1n").innerText=this.response;
+      //document.querySelector("#tr").innerText="sdesign";
     },
     async send3(){
       const response=await fetch("https://api.tickettailor.com/v1/events/:2036131",{
